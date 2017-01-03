@@ -12,6 +12,9 @@
 		3FA60BC91E1C228700D8EFB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA60BC71E1C228700D8EFB1 /* Main.storyboard */; };
 		3FA60BCB1E1C228700D8EFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */; };
 		3FA60BCE1E1C228700D8EFB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA60BCC1E1C228700D8EFB1 /* LaunchScreen.storyboard */; };
+		3FA60BD61E1C237900D8EFB1 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */; };
+		3FA60BD81E1C239300D8EFB1 /* WunschlisteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */; };
+		3FA60BDA1E1C23AA00D8EFB1 /* WarenkorbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FA60BCD1E1C228700D8EFB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FA60BCF1E1C228700D8EFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WunschlisteViewController.swift; sourceTree = "<group>"; };
+		3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				3FA60BC31E1C228700D8EFB1 /* AppDelegate.swift */,
 				3FA60BC51E1C228700D8EFB1 /* ViewController.swift */,
+				3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */,
+				3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */,
+				3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */,
 				3FA60BC71E1C228700D8EFB1 /* Main.storyboard */,
 				3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */,
 				3FA60BCC1E1C228700D8EFB1 /* LaunchScreen.storyboard */,
@@ -136,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA60BD61E1C237900D8EFB1 /* ProfilViewController.swift in Sources */,
 				3FA60BC61E1C228700D8EFB1 /* ViewController.swift in Sources */,
+				3FA60BDA1E1C23AA00D8EFB1 /* WarenkorbViewController.swift in Sources */,
+				3FA60BD81E1C239300D8EFB1 /* WunschlisteViewController.swift in Sources */,
 				3FA60BC41E1C228700D8EFB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
