@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QOt-z2-Qqz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SUD-8w-5sn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -196,6 +196,7 @@
                         <segue destination="aaI-uZ-dCo" kind="relationship" relationship="viewControllers" id="AjU-Yd-6se"/>
                         <segue destination="hwx-7F-7HQ" kind="relationship" relationship="viewControllers" id="lSW-YK-j1M"/>
                         <segue destination="zmn-u6-fXt" kind="relationship" relationship="viewControllers" id="R5H-eY-8Dx"/>
+                        <segue destination="QOt-z2-Qqz" kind="relationship" relationship="viewControllers" id="DdN-iS-jmL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqN-3H-1s5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,10 +260,11 @@
             </objects>
             <point key="canvasLocation" x="1180" y="699"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Kategorien-->
         <scene sceneID="0Wu-dD-sTk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QOt-z2-Qqz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kategorien" id="S9T-AO-3xW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAk-9y-FTK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
