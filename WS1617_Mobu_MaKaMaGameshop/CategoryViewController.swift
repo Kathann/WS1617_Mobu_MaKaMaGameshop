@@ -58,8 +58,12 @@ class CategoryViewController: UIViewController {
                 if cell!.nameLabel.text == "Point and Click"{
                     ArticleVC?.createGameDataPointandClick()
                 }
+                    
+                if cell!.nameLabel.text == "Rpg"{
+                    ArticleVC?.createGameDataRpg()
+                }
                 else{
-               //     ArticleVC?.createGameData2()
+                    //ArticleVC?.createGameDataAction()
                 }// NOCH ANPASSEN
             }
         }

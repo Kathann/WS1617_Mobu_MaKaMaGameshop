@@ -65,6 +65,27 @@ class ArticleViewController: UIViewController {
         games[1].append(game9)
     }
     
+    func createGameDataRpg(){//TESTMETHODE
+        let game1: Spiel = Spiel(gameImageName: "darksouls3", name: "Darksouls 3", categorie: "Rpg", price: 29.99)
+        let game2: Spiel = Spiel(gameImageName: "deusex", name: "Deus Ex: Mankind Divided", categorie: "Rpg", price: 24.99)
+        let game3: Spiel = Spiel(gameImageName: "dragonage", name: "Dragon Age: Inquisition", categorie: "Rpg", price: 9.99)
+        let game4: Spiel = Spiel(gameImageName: "fallout4", name: "Fallout 4", categorie: "Rpg", price: 19.99)
+        let game5: Spiel = Spiel(gameImageName: "finalfantasy15", name: "Final Fantasy 15", categorie: "Rpg", price: 19.99)
+        let game6: Spiel = Spiel(gameImageName: "skyforge", name: "Skyforge", categorie: "Rpg", price: 9.99)
+        let game7: Spiel = Spiel(gameImageName: "skyrim", name: "The Elderscrolls: Skyrim", categorie: "Rpg", price: 9.99)
+        let game8: Spiel = Spiel(gameImageName: "thewitcher3", name: "The Witcher 3: Wild Hunt", categorie: "Rpg", price: 14.99)
+        let game9: Spiel = Spiel(gameImageName: "worldofwarcraft", name: "World of Warcraft", categorie: "Rpg", price: 9.99)
+        games[2].append(game1)
+        games[2].append(game2)
+        games[2].append(game3)
+        games[2].append(game4)
+        games[2].append(game5)
+        games[2].append(game6)
+        games[2].append(game7)
+        games[2].append(game8)
+        games[2].append(game9)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailView" {
             let detailVC: DetailViewController? = segue.destination as? DetailViewController
