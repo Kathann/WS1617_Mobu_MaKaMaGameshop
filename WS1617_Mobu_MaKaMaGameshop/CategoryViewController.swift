@@ -51,11 +51,15 @@ class CategoryViewController: UIViewController {
             let cell: CategoryCell? = sender as? CategoryCell
             
             if cell != nil && ArticleVC != nil { // Wenn text im Zelle = RPG rufe methode gamedata2 auf.
-                if cell!.nameLabel.text == "Rpg"{
-                    ArticleVC?.createGameData2()
+                if cell!.nameLabel.text == "Action"{
+                    ArticleVC?.createGameDataAction()
+                }
+                    
+                if cell!.nameLabel.text == "Point and Click"{
+                    ArticleVC?.createGameDataPointandClick()
                 }
                 else{
-                    ArticleVC?.createGameData()
+               //     ArticleVC?.createGameData2()
                 }// NOCH ANPASSEN
             }
         }
