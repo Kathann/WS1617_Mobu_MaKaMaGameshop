@@ -272,8 +272,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8M-Mv-dqu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kategorie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIK-tg-N2X">
+                                        <rect key="frame" x="5" y="7" width="365" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VIK-tg-N2X" firstAttribute="leading" secondItem="l8M-Mv-dqu" secondAttribute="leading" constant="5" id="0Lc-xF-OUV"/>
+                                    <constraint firstAttribute="height" constant="50" id="1Vs-AP-gDP"/>
+                                    <constraint firstItem="VIK-tg-N2X" firstAttribute="top" secondItem="l8M-Mv-dqu" secondAttribute="top" constant="7" id="67p-PX-7BF"/>
+                                    <constraint firstAttribute="bottom" secondItem="VIK-tg-N2X" secondAttribute="bottom" id="QXr-8W-lXJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="VIK-tg-N2X" secondAttribute="trailing" constant="5" id="dbW-FN-uQl"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nrL-qz-te6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="81c-B0-fPd" customClass="GameCell" customModule="WS1617_Mobu_MaKaMaGameshop" customModuleProvider="target">
@@ -339,13 +358,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nrL-qz-te6" secondAttribute="trailing" id="DvK-5F-VIU"/>
-                            <constraint firstItem="nrL-qz-te6" firstAttribute="top" secondItem="AIX-nV-Tlf" secondAttribute="top" id="L80-1w-6lE"/>
-                            <constraint firstAttribute="bottom" secondItem="nrL-qz-te6" secondAttribute="bottom" id="ZMK-DH-xJq"/>
-                            <constraint firstItem="nrL-qz-te6" firstAttribute="leading" secondItem="AIX-nV-Tlf" secondAttribute="leading" id="dF2-tG-lII"/>
+                            <constraint firstAttribute="trailing" secondItem="nrL-qz-te6" secondAttribute="trailing" id="9H1-yb-rEj"/>
+                            <constraint firstItem="l8M-Mv-dqu" firstAttribute="leading" secondItem="AIX-nV-Tlf" secondAttribute="leading" id="Csw-j4-YEG"/>
+                            <constraint firstAttribute="trailing" secondItem="l8M-Mv-dqu" secondAttribute="trailing" id="F7L-eh-ur3"/>
+                            <constraint firstItem="nrL-qz-te6" firstAttribute="top" secondItem="l8M-Mv-dqu" secondAttribute="bottom" id="STo-B9-NyQ"/>
+                            <constraint firstItem="l8M-Mv-dqu" firstAttribute="top" secondItem="hVm-1C-ONc" secondAttribute="bottom" id="Xga-6k-SDl"/>
+                            <constraint firstAttribute="bottom" secondItem="nrL-qz-te6" secondAttribute="bottom" id="XmD-MN-VWB"/>
+                            <constraint firstItem="nrL-qz-te6" firstAttribute="leading" secondItem="AIX-nV-Tlf" secondAttribute="leading" id="wCf-zn-Lmn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="VIK-tg-N2X" id="0sg-XY-ZwU"/>
                         <outlet property="tableView" destination="nrL-qz-te6" id="2iw-lN-8Tu"/>
                     </connections>
                 </viewController>

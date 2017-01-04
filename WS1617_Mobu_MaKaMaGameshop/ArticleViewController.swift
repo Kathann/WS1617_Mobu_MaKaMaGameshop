@@ -10,13 +10,18 @@ import UIKit
 
 class ArticleViewController: UIViewController {
     
-
+    var categoryText: String?
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var games: [[Spiel]] = [[], [], []]
+    var games: [Spiel] = []// Für jede Section eine Klammer, sonst out of index...
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if categoryText != nil {
+            self.categoryLabel.text = categoryText!
+        }
         self.tableView.dataSource = self
+        
         
         // Do any additional setup after loading the view.
     }
@@ -33,18 +38,18 @@ class ArticleViewController: UIViewController {
         let game9: Spiel = Spiel(gameImageName: "thewitcher3", name: "The Witcher 3: Wild Hunt", categorie: "Action", price: 14.99)
                 // Section: 0 = Action, 1= P&C, 2 = Rpg, 3 = Simulation, 4 = Sports, 5 = Strategie
         
-        games[0].append(game1)
-        games[0].append(game2)
-        games[0].append(game3)
-        games[0].append(game4)
-        games[0].append(game5)
-        games[0].append(game6)
-        games[0].append(game7)
-        games[0].append(game8)
-        games[0].append(game9)
+        games.append(game1)
+        games.append(game2)
+        games.append(game3)
+        games.append(game4)
+        games.append(game5)
+        games.append(game6)
+        games.append(game7)
+        games.append(game8)
+        games.append(game9)
     }
     
-    func createGameDataPointandClick(){//TESTMETHODE
+    func createGameDataPointandClick(){
         let game1: Spiel = Spiel(gameImageName: "dayofthetentacle", name: "Day of the Tentacle", categorie: "Point and Click", price: 12.99)
         let game2: Spiel = Spiel(gameImageName: "decay", name: "Decay - The Mare", categorie: "Point and Click", price: 6.99)
         let game3: Spiel = Spiel(gameImageName: "indianajones", name: "Indiana Jones and ...", categorie: "Point and Click", price: 4.99)
@@ -54,15 +59,15 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "samandmax", name: "Sam & Max: Hit the Road", categorie: "Point and Click", price: 29.99)
         let game8: Spiel = Spiel(gameImageName: "secretofmonkeyisland", name: "Secret of Monkey Island", categorie: "Point and Click", price: 9.99)
         let game9: Spiel = Spiel(gameImageName: "zakmckracken", name: "Zak McKracken", categorie: "Point and Click", price: 249.99)
-        games[1].append(game1)
-        games[1].append(game2)
-        games[1].append(game3)
-        games[1].append(game4)
-        games[1].append(game5)
-        games[1].append(game6)
-        games[1].append(game7)
-        games[1].append(game8)
-        games[1].append(game9)
+        games.append(game1)
+        games.append(game2)
+        games.append(game3)
+        games.append(game4)
+        games.append(game5)
+        games.append(game6)
+        games.append(game7)
+        games.append(game8)
+        games.append(game9)
     }
     
     func createGameDataRpg(){//TESTMETHODE
@@ -75,15 +80,39 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "skyrim", name: "The Elderscrolls: Skyrim", categorie: "Rpg", price: 9.99)
         let game8: Spiel = Spiel(gameImageName: "thewitcher3", name: "The Witcher 3: Wild Hunt", categorie: "Rpg", price: 14.99)
         let game9: Spiel = Spiel(gameImageName: "worldofwarcraft", name: "World of Warcraft", categorie: "Rpg", price: 9.99)
-        games[2].append(game1)
-        games[2].append(game2)
-        games[2].append(game3)
-        games[2].append(game4)
-        games[2].append(game5)
-        games[2].append(game6)
-        games[2].append(game7)
-        games[2].append(game8)
-        games[2].append(game9)
+        games.append(game1)
+        games.append(game2)
+        games.append(game3)
+        games.append(game4)
+        games.append(game5)
+        games.append(game6)
+        games.append(game7)
+        games.append(game8)
+        games.append(game9)
+    }
+    
+    func createGameDataSports(){
+        let game1: Spiel = Spiel(gameImageName: "bloodbowl2", name: "Blood Bowl 2", categorie: "Sports", price: 11.99)
+        let game2: Spiel = Spiel(gameImageName: "fifa17", name: "Fifa 2017", categorie: "Sports", price: 29.99)
+        let game3: Spiel = Spiel(gameImageName: "madden", name: "Madden NFL", categorie: "Sports", price: 34.99)
+        let game4: Spiel = Spiel(gameImageName: "nba2k17", name: "NBA 2k17", categorie: "Sports", price: 29.99)
+        let game5: Spiel = Spiel(gameImageName: "nhl17", name: "NHL 2017", categorie: "Sports", price: 34.99)
+        let game6: Spiel = Spiel(gameImageName: "pes17", name: "Pro Evolution Soccer 2017", categorie: "Sports", price: 29.99)
+        let game7: Spiel = Spiel(gameImageName: "pga", name: "Rory McIlroy PGA Tour", categorie: "Sports", price: 34.99)
+        let game8: Spiel = Spiel(gameImageName: "steep", name: "Steep", categorie: "Sports", price: 29.99)
+        let game9: Spiel = Spiel(gameImageName: "wwe2k17", name: "WWE 2k17", categorie: "Sports", price: 29.99)
+        
+        games.append(game1)
+        games.append(game2)
+        games.append(game3)
+        games.append(game4)
+        games.append(game5)
+        games.append(game6)
+        games.append(game7)
+        games.append(game8)
+        games.append(game9)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -103,7 +132,7 @@ class ArticleViewController: UIViewController {
 
 extension ArticleViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
         if section == 0 {
             return "Action"
         }
@@ -125,15 +154,15 @@ extension ArticleViewController: UITableViewDataSource {
         else {
             return "404 Page not found :)"                  // Sollte NIE eintreffen
         }
-    }
+    }*/
     
-    func numberOfSections(in tableView: UITableView) -> Int{
+    /*func numberOfSections(in tableView: UITableView) -> Int{
         return self.games.count
-    }
+    }*/
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games[section].count
+        return games.count
     }
     
     
@@ -146,7 +175,7 @@ extension ArticleViewController: UITableViewDataSource {
             cell = GameCell(style: .default, reuseIdentifier: "gameCell")
         }
         
-        let currentGame: Spiel = games[indexPath.section][indexPath.row]
+        let currentGame: Spiel = games[indexPath.row] //games[indexPath.section][indexPath.row]
         cell!.gameImageView.image = UIImage(named: currentGame.gameImageName)
         cell!.nameLabel.text = currentGame.name
         cell!.categoryLabel.text = currentGame.categorie
