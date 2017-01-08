@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         self.createCategoryData()
         self.tableView.dataSource = self
-        
+        self.navigationItem.title = "Kategorien"
         // Do any additional setup after loading the view.
     }
     

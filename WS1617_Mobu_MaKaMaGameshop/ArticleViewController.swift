@@ -17,10 +17,8 @@ class ArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if categoryText != nil {
-            self.categoryLabel.text = categoryText!
-        }
         self.tableView.dataSource = self
+        self.navigationItem.title = categoryText!
         
         
         // Do any additional setup after loading the view.
@@ -94,7 +92,7 @@ class ArticleViewController: UIViewController {
     func createGameDataSports(){
         let game1: Spiel = Spiel(gameImageName: "bloodbowl2", name: "Blood Bowl 2", categorie: "Sports", price: 11.99, teaserImageName: "minecraftheader")
         let game2: Spiel = Spiel(gameImageName: "fifa17", name: "Fifa 2017", categorie: "Sports", price: 29.99, teaserImageName: "minecraftheader")
-        let game3: Spiel = Spiel(gameImageName: "madden", name: "Madden NFL", categorie: "Sports", price: 34.99, teaserImageName: "minecraftheader")
+        let game3: Spiel = Spiel(gameImageName: "maddennfl", name: "Madden NFL", categorie: "Sports", price: 34.99, teaserImageName: "minecraftheader")
         let game4: Spiel = Spiel(gameImageName: "nba2k17", name: "NBA 2k17", categorie: "Sports", price: 29.99, teaserImageName: "minecraftheader")
         let game5: Spiel = Spiel(gameImageName: "nhl17", name: "NHL 2017", categorie: "Sports", price: 34.99, teaserImageName: "minecraftheader")
         let game6: Spiel = Spiel(gameImageName: "pes17", name: "Pro Evolution Soccer 2017", categorie: "Sports", price: 29.99, teaserImageName: "minecraftheader")
