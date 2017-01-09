@@ -13,7 +13,7 @@ class WarenkorbCell: UITableViewCell {
     @IBOutlet weak var deleteIcon: UIImageView!
     @IBOutlet weak var gamePreis: UILabel!
     @IBOutlet weak var gameEdition: UILabel!
-    @IBOutlet weak var gameVersiom: UILabel!
+    @IBOutlet weak var gameVersion: UILabel!
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
     

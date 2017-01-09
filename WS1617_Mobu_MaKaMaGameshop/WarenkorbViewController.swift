@@ -8,58 +8,69 @@
 
 import UIKit
 
+//protocol WarenkorbViewControllerDelegate {
+//    getAnzahlVonArtikel() ->Int
+//    getSpielForRowAtIndexPath(indexPath: IndexPath) -> Spiel
+//    entferneSpielVonWarenkorb(indexPath: IndexPath)
+//}
 class WarenkorbViewController: UIViewController {
+    
+    //var delegate: WarenkorbViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
-    var eintraege: [Spiel] = []
+    var eintraege: [Artikel] = []
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createArtikelData()
+        self.tableView.dataSource = self
     }
-
+    
+    
+func createArtikelData(){
+       let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
+    
+        eintraege.append(artikel1)
+    
+  }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension WarenkorbViewController: UITableViewDataSource {
-    //Zeile 0 wird mit RPG befüllt, Zeile 1 mit Sport...Eventuell bessere Alternative ein neues Swift File mit Struct Kategorie anzulegen.
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return category.count
+     
         return eintraege.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: WarenkorbCell? = tableView.dequeueReusableCell(withIdentifier: "warenKorbCell") as? WarenkorbCell
+        var cell: WarenkorbCell? = tableView.dequeueReusableCell(withIdentifier: "warenkorbCell") as? WarenkorbCell
         
         if cell == nil {
             cell = WarenkorbCell(style: .default, reuseIdentifier: "warenkorbCell")
         }
         
-        let currentSpiel: Spiel = eintraege[indexPath.row]
-        //cell!.gameImage = (UIImageView);currentSpiel.teaserImageName
-       cell!.gameTitle.text = currentSpiel.name
-        //cell!.gamePreis.text = (String);currentSpiel.price
+        let currentCell: Artikel = eintraege[indexPath.row]
+        cell!.gameTitle.text = currentCell.name
+        cell!.gameEdition.text = currentCell.edition
+        cell!.gameVersion.text = currentCell.version
+        cell!.gamePreis.text = currentCell.price
+        cell!.gameImage.image = UIImage(named: currentCell.gameImageName)
+        cell!.deleteIcon.image = UIImage(named: currentCell.deleteIcon)
         
-       // cell!.accessoryType = .disclosureIndicator
+        
+        //cell!.accessoryType = .disclosureIndicator
         
         
         return cell!
+
         
     }
 }

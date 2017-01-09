@@ -22,6 +22,7 @@
 		3FA60BEA1E1C279200D8EFB1 /* Spiel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BE91E1C279200D8EFB1 /* Spiel.swift */; };
 		3FA60BEC1E1C27AB00D8EFB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BEB1E1C27AB00D8EFB1 /* DetailViewController.swift */; };
 		3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */; };
+		3FEB41C21E23EA6100392DA5 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB41C11E23EA6100392DA5 /* Artikel.swift */; };
 		3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		3FA60BE91E1C279200D8EFB1 /* Spiel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spiel.swift; sourceTree = "<group>"; };
 		3FA60BEB1E1C27AB00D8EFB1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kategorie.swift; sourceTree = "<group>"; };
+		3FEB41C11E23EA6100392DA5 /* Artikel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
 		3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +83,6 @@
 				3FA60BC51E1C228700D8EFB1 /* ViewController.swift */,
 				3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */,
 				3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */,
-				3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */,
-				3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */,
 				3FA60BDF1E1C271600D8EFB1 /* CategoryViewController.swift */,
 				3FA60BE31E1C275400D8EFB1 /* CategoryCell.swift */,
 				3FA60BE51E1C276B00D8EFB1 /* ArticleViewController.swift */,
@@ -90,6 +90,9 @@
 				3FA60BE91E1C279200D8EFB1 /* Spiel.swift */,
 				3FA60BEB1E1C27AB00D8EFB1 /* DetailViewController.swift */,
 				3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */,
+				3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */,
+				3FEB41C11E23EA6100392DA5 /* Artikel.swift */,
+				3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */,
 				3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */,
 				3FA60BCC1E1C228700D8EFB1 /* LaunchScreen.storyboard */,
 				3FA60BCF1E1C228700D8EFB1 /* Info.plist */,
@@ -171,6 +174,7 @@
 			files = (
 				3FA60BEC1E1C27AB00D8EFB1 /* DetailViewController.swift in Sources */,
 				3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */,
+				3FEB41C21E23EA6100392DA5 /* Artikel.swift in Sources */,
 				3FA60BD61E1C237900D8EFB1 /* ProfilViewController.swift in Sources */,
 				3FA60BE61E1C276B00D8EFB1 /* ArticleViewController.swift in Sources */,
 				3FA60BE81E1C277D00D8EFB1 /* GameCell.swift in Sources */,
