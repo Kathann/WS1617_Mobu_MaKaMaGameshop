@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         self.createCategoryData()
         self.tableView.dataSource = self
-        
+        self.navigationItem.title = "Kategorien"
         // Do any additional setup after loading the view.
     }
     
@@ -50,14 +50,45 @@ class CategoryViewController: UIViewController {
             
             let cell: CategoryCell? = sender as? CategoryCell
             
-            if cell != nil && ArticleVC != nil { // Wenn text im Zelle = RPG rufe methode gamedata2 auf.
+            if cell != nil && ArticleVC != nil {
+                
+                ArticleVC!.categoryText = cell!.nameLabel.text
+                
+                if cell!.nameLabel.text == "Action"{
+                    ArticleVC?.createGameDataAction()
+                }
+                if cell!.nameLabel.text == "Point and Click"{
+                    ArticleVC?.createGameDataPointandClick()
+                }
                 if cell!.nameLabel.text == "Rpg"{
-                    ArticleVC?.createGameData2()
+                    ArticleVC?.createGameDataRpg()
+                }
+                if cell!.nameLabel.text == "Sports"{
+                    ArticleVC?.createGameDataSports()
+                }
+
+            }
+            
+          /*  if cell != nil && ArticleVC != nil {                  Code für Sections
+                if cell!.nameLabel.text == "Action"{
+                    ArticleVC?.createGameDataAction()
+                }
+                    
+                if cell!.nameLabel.text == "Point and Click"{
+                    ArticleVC?.createGameDataPointandClick()
+                }
+                    
+                if cell!.nameLabel.text == "Rpg"{
+                    ArticleVC?.createGameDataRpg()
+                }
+                    
+                if cell!.nameLabel.text == "Sports"{
+                    ArticleVC?.createGameDataSports()
                 }
                 else{
-                    ArticleVC?.createGameData()
+                    //ArticleVC?.createGameDataAction()
                 }// NOCH ANPASSEN
-            }
+            }*/
         }
     }
     
