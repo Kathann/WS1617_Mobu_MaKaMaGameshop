@@ -52,6 +52,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         if contentGame != nil {
             self.contentGameLabel.text = contentGame!
         }
+        
         editionPickerView.delegate = self
         editionPickerView.dataSource = self
         

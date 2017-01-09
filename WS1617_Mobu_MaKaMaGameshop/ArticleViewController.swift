@@ -50,7 +50,7 @@ class ArticleViewController: UIViewController {
     func createGameDataPointandClick(){
         let game1: Spiel = Spiel(gameImageName: "dayofthetentacle", name: "Day of the Tentacle", categorie: "Point and Click", price: 12.99, teaserImageName: "minecraftheader")
         let game2: Spiel = Spiel(gameImageName: "decay", name: "Decay - The Mare", categorie: "Point and Click", price: 6.99, teaserImageName: "minecraftheader")
-        let game3: Spiel = Spiel(gameImageName: "indianajones", name: "Indiana Jones and ...", categorie: "Point and Click", price: 4.99, teaserImageName: "minecraftheader")
+        let game3: Spiel = Spiel(gameImageName: "indianajones", name: "Indiana Jones and the fate of atlantis", categorie: "Point and Click", price: 4.99, teaserImageName: "minecraftheader")
         let game4: Spiel = Spiel(gameImageName: "loom", name: "Loom", categorie: "Point and Click", price: 5.99, teaserImageName: "minecraftheader")
         let game5: Spiel = Spiel(gameImageName: "maniacmanson", name: "Maniac Manson", categorie: "Point and Click", price: 999.99, teaserImageName: "minecraftheader")
         let game6: Spiel = Spiel(gameImageName: "randalsmonday", name: "Randals's Monday", categorie: "Point and Click", price: 7.99, teaserImageName: "minecraftheader")
