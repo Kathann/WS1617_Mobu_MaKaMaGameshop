@@ -22,6 +22,7 @@
 		3FA60BEA1E1C279200D8EFB1 /* Spiel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BE91E1C279200D8EFB1 /* Spiel.swift */; };
 		3FA60BEC1E1C27AB00D8EFB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BEB1E1C27AB00D8EFB1 /* DetailViewController.swift */; };
 		3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */; };
+		3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3FA60BE91E1C279200D8EFB1 /* Spiel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spiel.swift; sourceTree = "<group>"; };
 		3FA60BEB1E1C27AB00D8EFB1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kategorie.swift; sourceTree = "<group>"; };
+		3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */,
 				3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */,
 				3FA60BD91E1C23AA00D8EFB1 /* WarenkorbViewController.swift */,
+				3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */,
 				3FA60BDF1E1C271600D8EFB1 /* CategoryViewController.swift */,
 				3FA60BE31E1C275400D8EFB1 /* CategoryCell.swift */,
 				3FA60BE51E1C276B00D8EFB1 /* ArticleViewController.swift */,
@@ -178,6 +181,7 @@
 				3FA60BD81E1C239300D8EFB1 /* WunschlisteViewController.swift in Sources */,
 				3FA60BE01E1C271600D8EFB1 /* CategoryViewController.swift in Sources */,
 				3FA60BC41E1C228700D8EFB1 /* AppDelegate.swift in Sources */,
+				3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +343,7 @@
 				3FA60BD41E1C228700D8EFB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

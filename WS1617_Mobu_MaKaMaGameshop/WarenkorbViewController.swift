@@ -9,7 +9,9 @@
 import UIKit
 
 class WarenkorbViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    var eintraege: [Spiel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +34,32 @@ class WarenkorbViewController: UIViewController {
     }
     */
 
+}
+
+extension WarenkorbViewController: UITableViewDataSource {
+    //Zeile 0 wird mit RPG befüllt, Zeile 1 mit Sport...Eventuell bessere Alternative ein neues Swift File mit Struct Kategorie anzulegen.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return category.count
+        return eintraege.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: WarenkorbCell? = tableView.dequeueReusableCell(withIdentifier: "warenKorbCell") as? WarenkorbCell
+        
+        if cell == nil {
+            cell = WarenkorbCell(style: .default, reuseIdentifier: "warenkorbCell")
+        }
+        
+        let currentSpiel: Spiel = eintraege[indexPath.row]
+        //cell!.gameImage = (UIImageView);currentSpiel.teaserImageName
+       cell!.gameTitle.text = currentSpiel.name
+        //cell!.gamePreis.text = (String);currentSpiel.price
+        
+       // cell!.accessoryType = .disclosureIndicator
+        
+        
+        return cell!
+        
+    }
 }

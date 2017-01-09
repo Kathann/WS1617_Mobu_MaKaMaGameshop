@@ -19,6 +19,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var contentGame: String?
     
  
+    @IBAction func warenkorbButton(_ sender: UIButton) {
+        // Versuche Elemente an Warenkorb weiterzugeben
+
+        
+    }
     
     
     @IBOutlet weak var contentGameLabel: UILabel!
