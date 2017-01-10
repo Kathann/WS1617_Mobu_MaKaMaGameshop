@@ -1,7 +1,7 @@
 //
 //  DetailViewController.swift
 //  WS1617_Mobu_MaKaMaGameshop
-//
+// Test Commit für die Aktualisierung
 //  Created by Student on 03.01.17.
 //  Copyright © 2017 fhkl. All rights reserved.
 //
