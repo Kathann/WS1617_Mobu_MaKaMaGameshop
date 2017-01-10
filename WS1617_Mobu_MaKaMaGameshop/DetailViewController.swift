@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
  
     @IBAction func warenkorbButton(_ sender: UIButton) {
-        let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
+        let artikel1: Artikel = Artikel(gameImageName: contentImage! ,name: contentGameLabel.text! , edition: editionLabel.text! , version: "PC", price: priceLabel.text!, deleteIcon: contentImage! )
         
         WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
         
