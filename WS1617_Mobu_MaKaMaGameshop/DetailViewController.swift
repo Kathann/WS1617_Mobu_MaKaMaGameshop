@@ -20,7 +20,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
  
     @IBAction func warenkorbButton(_ sender: UIButton) {
-        // Versuche Elemente an Warenkorb weiterzugeben
+        let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
+        
+        WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
+        
+        print("Button wurde gedrückt")
+        print(WarenkorbEintraegeArray.WarenkorbArray.eintraege)
+        
 
         
     }

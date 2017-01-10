@@ -22,17 +22,17 @@ class WarenkorbViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createArtikelData()
+        //createArtikelData()
         self.tableView.dataSource = self
     }
     
-    
-func createArtikelData(){
-       let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
-    
-        WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
-    
-  }
+//    
+//func createArtikelData(){
+//       let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
+//    
+//        WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
+//    
+//  }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
