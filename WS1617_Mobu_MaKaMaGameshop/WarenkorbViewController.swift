@@ -17,7 +17,6 @@ class WarenkorbViewController: UIViewController {
     
     //var delegate: WarenkorbViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
-    var eintraege: [Artikel] = []
     
 
     
@@ -31,7 +30,7 @@ class WarenkorbViewController: UIViewController {
 func createArtikelData(){
        let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
     
-        eintraege.append(artikel1)
+        WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
     
   }
     override func didReceiveMemoryWarning() {
@@ -46,7 +45,7 @@ extension WarenkorbViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return eintraege.count
+        return WarenkorbEintraegeArray.WarenkorbArray.eintraege.count
 
     }
     
@@ -57,7 +56,7 @@ extension WarenkorbViewController: UITableViewDataSource {
             cell = WarenkorbCell(style: .default, reuseIdentifier: "warenkorbCell")
         }
         
-        let currentCell: Artikel = eintraege[indexPath.row]
+        let currentCell: Artikel = WarenkorbEintraegeArray.WarenkorbArray.eintraege[indexPath.row]
         cell!.gameTitle.text = currentCell.name
         cell!.gameEdition.text = currentCell.edition
         cell!.gameVersion.text = currentCell.version

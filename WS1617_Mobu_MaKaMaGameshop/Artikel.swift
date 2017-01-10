@@ -16,3 +16,5 @@ struct Artikel {
     var price: String
     var deleteIcon: String
 }
+
+
