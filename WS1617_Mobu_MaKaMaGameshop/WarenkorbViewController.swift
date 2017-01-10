@@ -18,24 +18,39 @@ class WarenkorbViewController: UIViewController {
     //var delegate: WarenkorbViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var gesamtPreisLabel: UILabel!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //createArtikelData()
         self.tableView.dataSource = self
+        gesamtPreisLabel.text = getItemsValue().description
+        
+        
     }
     
-//    
-//func createArtikelData(){
-//       let artikel1: Artikel = Artikel(gameImageName: "ark",name: "Test", edition: "Standard", version: "PC", price: "12,00", deleteIcon: "ark")
-//    
-//        WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
-//    
-//  }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    self.gesamtPreisLabel.reloadInputViews()
+    gesamtPreisLabel.text = getItemsValue().description
+    }
+    
+    func getItemsValue() -> Float{
+        // Funktion gibt dem Gesamtpreis-Label im Warenkorb den addierten Wert der Artikel aus dem Array eintraege
+        var gesamt: Float = 0
+        let i: Int = WarenkorbEintraegeArray.WarenkorbArray.eintraege.count
+        
+        if i > 0 {
+            for objects in WarenkorbEintraegeArray.WarenkorbArray.eintraege {
+                gesamt += (objects.price as NSString).floatValue
+            }
+        }
+        return gesamt
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -71,5 +86,17 @@ extension WarenkorbViewController: UITableViewDataSource {
         return cell!
 
         
+    }
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            //numbers.removeAtIndex(IndexPath.row)
+            //objects.remove(at: indexPath.row)
+            WarenkorbEintraegeArray.WarenkorbArray.eintraege.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            print("Artikel wurde gelöscht")
+            gesamtPreisLabel.text = getItemsValue().description
+            
+        }
     }
 }
