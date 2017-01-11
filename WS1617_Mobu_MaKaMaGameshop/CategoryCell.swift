@@ -2,6 +2,7 @@
 //  CategoryCell.swift
 //  WS1617_Mobu_MaKaMaGameshop
 // Test Commit
+// Test Commit 2.0
 //  Created by Student on 03.01.17.
 //  Copyright © 2017 fhkl. All rights reserved.
 //
