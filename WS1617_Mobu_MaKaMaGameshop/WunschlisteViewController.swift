@@ -10,26 +10,54 @@ import UIKit
 
 class WunschlisteViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var tableView: UITableView!
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            self.tableView.dataSource = self
+            
+            // Do any additional setup after loading the view.
+        }
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            self.tableView.reloadData()
+        }
+        
+        
     }
     
+    extension WunschlisteViewController: UITableViewDataSource {
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            
+            return WunschlisteArray.wunschlisteListe.wunschlisteEintraege.count
+            
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            var cell: WunschlisteCell? = tableView.dequeueReusableCell(withIdentifier: "wunschlisteCell") as? WunschlisteCell
+            
+            if cell == nil {
+                cell = WunschlisteCell(style: .default, reuseIdentifier: "wunschlisteCell")
+            }
+            let currentCell: WunschlisteArtikel = WunschlisteArray.wunschlisteListe.wunschlisteEintraege[indexPath.row]
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+            cell!.gameTitle.text = currentCell.name
+            cell!.gameInfo.text = currentCell.info
+            cell!.gameImage.image = UIImage(named: currentCell.gameImageName)
+            
+            
+            
+            //cell!.accessoryType = .disclosureIndicator
+            
+            
+            return cell!
+            
+            
+        }
 }

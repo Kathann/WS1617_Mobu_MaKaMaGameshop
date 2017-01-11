@@ -31,6 +31,14 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
     }
     
+    @IBAction func zurWunschliste(_ sender: Any) {
+        
+        let Artikel: WunschlisteArtikel = WunschlisteArtikel(gameImageName: contentImage!, name: contentGameLabel.text!, info: "Derzeit gibt es keine Sonderaktion für dieses Spiel")
+        
+        
+        WunschlisteArray.wunschlisteListe.wunschlisteEintraege.append(Artikel)
+        
+    }
     
     @IBOutlet weak var contentGameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
