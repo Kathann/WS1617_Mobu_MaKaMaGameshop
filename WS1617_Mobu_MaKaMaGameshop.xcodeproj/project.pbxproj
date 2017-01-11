@@ -24,6 +24,10 @@
 		3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */; };
 		3FCC2A721E2504E200884D6C /* WarenkorbEintraegeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC2A711E2504E200884D6C /* WarenkorbEintraegeArray.swift */; };
 		3FEB41C21E23EA6100392DA5 /* Artikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB41C11E23EA6100392DA5 /* Artikel.swift */; };
+		3FF5D4891E255D0200FCB176 /* ProfilArtikelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5D4881E255D0200FCB176 /* ProfilArtikelCell.swift */; };
+		3FF5D48B1E255D2400FCB176 /* ProfilArtikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5D48A1E255D2400FCB176 /* ProfilArtikel.swift */; };
+		3FF5D48D1E255D4200FCB176 /* ProfilEintraegeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5D48C1E255D4200FCB176 /* ProfilEintraegeArray.swift */; };
+		3FF6DEF71E25AA7A00E6FC95 /* KaufabschlussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF6DEF61E25AA7A00E6FC95 /* KaufabschlussViewController.swift */; };
 		3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		3FA60BED1E1C27DA00D8EFB1 /* Kategorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kategorie.swift; sourceTree = "<group>"; };
 		3FCC2A711E2504E200884D6C /* WarenkorbEintraegeArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbEintraegeArray.swift; sourceTree = "<group>"; };
 		3FEB41C11E23EA6100392DA5 /* Artikel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artikel.swift; sourceTree = "<group>"; };
+		3FF5D4881E255D0200FCB176 /* ProfilArtikelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilArtikelCell.swift; sourceTree = "<group>"; };
+		3FF5D48A1E255D2400FCB176 /* ProfilArtikel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilArtikel.swift; sourceTree = "<group>"; };
+		3FF5D48C1E255D4200FCB176 /* ProfilEintraegeArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilEintraegeArray.swift; sourceTree = "<group>"; };
+		3FF6DEF61E25AA7A00E6FC95 /* KaufabschlussViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaufabschlussViewController.swift; sourceTree = "<group>"; };
 		3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				3FA60BC71E1C228700D8EFB1 /* Main.storyboard */,
+				3FF6DEF61E25AA7A00E6FC95 /* KaufabschlussViewController.swift */,
 				3FA60BC31E1C228700D8EFB1 /* AppDelegate.swift */,
 				3FA60BC51E1C228700D8EFB1 /* ViewController.swift */,
-				3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */,
 				3FA60BD71E1C239300D8EFB1 /* WunschlisteViewController.swift */,
 				3FA60BDF1E1C271600D8EFB1 /* CategoryViewController.swift */,
 				3FA60BE31E1C275400D8EFB1 /* CategoryCell.swift */,
@@ -96,6 +104,10 @@
 				3FCC2A711E2504E200884D6C /* WarenkorbEintraegeArray.swift */,
 				3FEB41C11E23EA6100392DA5 /* Artikel.swift */,
 				3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */,
+				3FA60BD51E1C237900D8EFB1 /* ProfilViewController.swift */,
+				3FF5D4881E255D0200FCB176 /* ProfilArtikelCell.swift */,
+				3FF5D48A1E255D2400FCB176 /* ProfilArtikel.swift */,
+				3FF5D48C1E255D4200FCB176 /* ProfilEintraegeArray.swift */,
 				3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */,
 				3FA60BCC1E1C228700D8EFB1 /* LaunchScreen.storyboard */,
 				3FA60BCF1E1C228700D8EFB1 /* Info.plist */,
@@ -177,16 +189,20 @@
 			files = (
 				3FA60BEC1E1C27AB00D8EFB1 /* DetailViewController.swift in Sources */,
 				3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */,
+				3FF6DEF71E25AA7A00E6FC95 /* KaufabschlussViewController.swift in Sources */,
 				3FEB41C21E23EA6100392DA5 /* Artikel.swift in Sources */,
 				3FA60BD61E1C237900D8EFB1 /* ProfilViewController.swift in Sources */,
 				3FA60BE61E1C276B00D8EFB1 /* ArticleViewController.swift in Sources */,
 				3FA60BE81E1C277D00D8EFB1 /* GameCell.swift in Sources */,
 				3FA60BC61E1C228700D8EFB1 /* ViewController.swift in Sources */,
 				3FA60BDA1E1C23AA00D8EFB1 /* WarenkorbViewController.swift in Sources */,
+				3FF5D48D1E255D4200FCB176 /* ProfilEintraegeArray.swift in Sources */,
 				3FA60BEA1E1C279200D8EFB1 /* Spiel.swift in Sources */,
 				3FA60BE41E1C275400D8EFB1 /* CategoryCell.swift in Sources */,
+				3FF5D4891E255D0200FCB176 /* ProfilArtikelCell.swift in Sources */,
 				3FA60BD81E1C239300D8EFB1 /* WunschlisteViewController.swift in Sources */,
 				3FA60BE01E1C271600D8EFB1 /* CategoryViewController.swift in Sources */,
+				3FF5D48B1E255D2400FCB176 /* ProfilArtikel.swift in Sources */,
 				3FA60BC41E1C228700D8EFB1 /* AppDelegate.swift in Sources */,
 				3FCC2A721E2504E200884D6C /* WarenkorbEintraegeArray.swift in Sources */,
 				3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */,

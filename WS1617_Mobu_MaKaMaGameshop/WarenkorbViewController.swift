@@ -1,21 +1,16 @@
 //
 //  WarenkorbViewController.swift
 //  WS1617_Mobu_MaKaMaGameshop
-//  Test Commit
+//
 //  Created by Student on 03.01.17.
 //  Copyright © 2017 fhkl. All rights reserved.
 //
 
 import UIKit
 
-//protocol WarenkorbViewControllerDelegate {
-//    getAnzahlVonArtikel() ->Int
-//    getSpielForRowAtIndexPath(indexPath: IndexPath) -> Spiel
-//    entferneSpielVonWarenkorb(indexPath: IndexPath)
-//}
+
 class WarenkorbViewController: UIViewController {
     
-    //var delegate: WarenkorbViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var gesamtPreisLabel: UILabel!
@@ -48,11 +43,74 @@ class WarenkorbViewController: UIViewController {
         }
         return gesamt
     }
+    @IBAction func kaufenButton(_ sender: Any) {
+        // Fügt die Artikel aus dem Warenkorb in das ProfilArtikel Array herein und füllt es mit den entsprechenden Werten
+        
+        let i: Int = WarenkorbEintraegeArray.WarenkorbArray.eintraege.count
+
+        for j in (0..<i) {
+            
+            let Artikel: ProfilArtikel = ProfilArtikel(gameImageName: WarenkorbEintraegeArray.WarenkorbArray.eintraege[j].gameImageName, name: WarenkorbEintraegeArray.WarenkorbArray.eintraege[j].name, datum: "1.1.17")
+            
+            
+            ProfilEintraegeArray.ProfilArray.profilEintraege.append(Artikel)
+            
+        
+            }
+
+
+        // Löscht Artikel aus dem Warenkorb
+        WarenkorbEintraegeArray.WarenkorbArray.eintraege.removeAll()
+        // Aktualisiert die Table View
+        self.tableView.reloadData()
+        // Aktualisiert den Preislabel
+        self.gesamtPreisLabel.reloadInputViews()
+        gesamtPreisLabel.text = getItemsValue().description
+        
+        performSegue(withIdentifier: "kaufabschluss", sender: Any?.self)
+        
+    }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "kaufabschluss" {
+//            let ArticleVC: KaufabschlussViewController? = segue.destination as? KaufabschlussViewController
+//            
+//            
+//            let bnt: UIButton? = sender as? UIButton
+//            
+//            if bnt != nil && ArticleVC != nil {
+//                let i: Int = WarenkorbEintraegeArray.WarenkorbArray.eintraege.count
+//                
+//                for j in (0..<i) {
+//                    
+//                    let Artikel: ProfilArtikel = ProfilArtikel(gameImageName: WarenkorbEintraegeArray.WarenkorbArray.eintraege[j].gameImageName, name: WarenkorbEintraegeArray.WarenkorbArray.eintraege[j].name, datum: "1.1.17")
+//                    
+//                    
+//                    ProfilEintraegeArray.ProfilArray.profilEintraege.append(Artikel)
+//                    
+//                    
+//                }
+//                
+//                
+//                // Löscht Artikel aus dem Warenkorb
+//                WarenkorbEintraegeArray.WarenkorbArray.eintraege.removeAll()
+//                // Aktualisiert die Table View
+//                self.tableView.reloadData()
+//                // Aktualisiert den Preislabel
+//                self.gesamtPreisLabel.reloadInputViews()
+//                gesamtPreisLabel.text = getItemsValue().description
+//                
+//
+//        }
+//
+//        }
+//    
+//    }
 
 }
 
@@ -99,4 +157,4 @@ extension WarenkorbViewController: UITableViewDataSource {
             
         }
     }
-}
+        }
