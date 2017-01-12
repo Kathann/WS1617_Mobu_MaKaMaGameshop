@@ -32,6 +32,9 @@
 		3FF5D48D1E255D4200FCB176 /* ProfilEintraegeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5D48C1E255D4200FCB176 /* ProfilEintraegeArray.swift */; };
 		3FF6DEF71E25AA7A00E6FC95 /* KaufabschlussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF6DEF61E25AA7A00E6FC95 /* KaufabschlussViewController.swift */; };
 		3FF921C41E23B27A00CA002F /* WarenkorbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */; };
+		F6A95CA31E283B9A00A2B0AF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A95CA21E283B9A00A2B0AF /* MapViewController.swift */; };
+		F6D40C1E1E28135800F51D4A /* ArticleDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6D40C1C1E28135800F51D4A /* ArticleDataModel.xcdatamodeld */; };
+		F6D40C201E28142500F51D4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D40C1F1E28142500F51D4A /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		3FF5D48C1E255D4200FCB176 /* ProfilEintraegeArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilEintraegeArray.swift; sourceTree = "<group>"; };
 		3FF6DEF61E25AA7A00E6FC95 /* KaufabschlussViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaufabschlussViewController.swift; sourceTree = "<group>"; };
 		3FF921C31E23B27A00CA002F /* WarenkorbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarenkorbCell.swift; sourceTree = "<group>"; };
+		F6A95CA21E283B9A00A2B0AF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F6D40C1D1E28135800F51D4A /* ArticleDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F6D40C1F1E28142500F51D4A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,9 @@
 				3FA60BCA1E1C228700D8EFB1 /* Assets.xcassets */,
 				3FA60BCC1E1C228700D8EFB1 /* LaunchScreen.storyboard */,
 				3FA60BCF1E1C228700D8EFB1 /* Info.plist */,
+				F6D40C1C1E28135800F51D4A /* ArticleDataModel.xcdatamodeld */,
+				F6D40C1F1E28142500F51D4A /* CoreDataStack.swift */,
+				F6A95CA21E283B9A00A2B0AF /* MapViewController.swift */,
 			);
 			path = WS1617_Mobu_MaKaMaGameshop;
 			sourceTree = "<group>";
@@ -197,12 +206,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA60BEC1E1C27AB00D8EFB1 /* DetailViewController.swift in Sources */,
+				F6D40C1E1E28135800F51D4A /* ArticleDataModel.xcdatamodeld in Sources */,
 				3FA60BEE1E1C27DA00D8EFB1 /* Kategorie.swift in Sources */,
 				3FF6DEF71E25AA7A00E6FC95 /* KaufabschlussViewController.swift in Sources */,
 				3FEB41C21E23EA6100392DA5 /* Artikel.swift in Sources */,
 				3FA60BD61E1C237900D8EFB1 /* ProfilViewController.swift in Sources */,
 				3FA60BE61E1C276B00D8EFB1 /* ArticleViewController.swift in Sources */,
 				3FA60BE81E1C277D00D8EFB1 /* GameCell.swift in Sources */,
+				F6A95CA31E283B9A00A2B0AF /* MapViewController.swift in Sources */,
 				3FA60BC61E1C228700D8EFB1 /* ViewController.swift in Sources */,
 				3FA60BDA1E1C23AA00D8EFB1 /* WarenkorbViewController.swift in Sources */,
 				3FF5D48D1E255D4200FCB176 /* ProfilEintraegeArray.swift in Sources */,
@@ -210,6 +221,7 @@
 				3FA60BEA1E1C279200D8EFB1 /* Spiel.swift in Sources */,
 				3FA60BE41E1C275400D8EFB1 /* CategoryCell.swift in Sources */,
 				3FBD730F1E266D31007E3736 /* WunschlisteArray.swift in Sources */,
+				F6D40C201E28142500F51D4A /* CoreDataStack.swift in Sources */,
 				3FF5D4891E255D0200FCB176 /* ProfilArtikelCell.swift in Sources */,
 				3FA60BD81E1C239300D8EFB1 /* WunschlisteViewController.swift in Sources */,
 				3FA60BE01E1C271600D8EFB1 /* CategoryViewController.swift in Sources */,
@@ -382,6 +394,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F6D40C1C1E28135800F51D4A /* ArticleDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F6D40C1D1E28135800F51D4A /* ArticleDataModel.xcdatamodel */,
+			);
+			currentVersion = F6D40C1D1E28135800F51D4A /* ArticleDataModel.xcdatamodel */;
+			path = ArticleDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3FA60BB81E1C228600D8EFB1 /* Project object */;
 }

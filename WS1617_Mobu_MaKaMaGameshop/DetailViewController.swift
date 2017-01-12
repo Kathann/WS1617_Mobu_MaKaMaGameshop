@@ -6,7 +6,9 @@
 //  Copyright © 2017 fhkl. All rights reserved.
 //
 
+
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
@@ -17,6 +19,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var teaserImage: String?
     var contentImage: String?
     var contentGame: String?
+    var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
  
     @IBAction func warenkorbButton(_ sender: UIButton) {
@@ -30,6 +33,8 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         
     }
+
+    
     
     @IBAction func zurWunschliste(_ sender: Any) {
         
