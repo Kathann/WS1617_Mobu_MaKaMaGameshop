@@ -35,7 +35,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Diese Information wird benötigt, um die Position auf der Karte anzuzeigen</string>
+	<string>Diese Information wird benötigt, um Ihren Standort anzuzeigen</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

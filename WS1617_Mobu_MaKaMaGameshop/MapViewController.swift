@@ -17,7 +17,8 @@ class MapViewController: UIViewController {
     var lastUserLocation: MKUserLocation?
     var locations: [MKPointAnnotation] = []
     var isUserInteraction: Bool = true
-    
+    var locationManager: CLLocationManager?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
@@ -29,6 +30,10 @@ class MapViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //override func viewDidAppear(_ animated: Bool) {
+     //   locationManager?.requestWhenInUseAuthorization()
+    //}
 
 
 
@@ -38,20 +43,20 @@ class MapViewController: UIViewController {
 
     func createAnnotation() {
         let annoation: MKPointAnnotation = MKPointAnnotation()
-        //annoation.coordinate = CLLocationCoordinate2DMake(49.261135, 7.360934)//Amerikastraße Zweibrucken
-        annoation.coordinate = CLLocationCoordinate2DMake(37.313728, -122.044973)
+        annoation.coordinate = CLLocationCoordinate2DMake(49.261135, 7.360934)//Amerikastraße Zweibrucken
+        //annoation.coordinate = CLLocationCoordinate2DMake(37.313728, -122.044973)
         annoation.title = "Shop 1"
         self.locations.append(annoation)
         
         let annoation2: MKPointAnnotation = MKPointAnnotation()
-        // annoation2.coordinate = CLLocationCoordinate2DMake(53.536172, 9.965777)//Hamburg Landungsbrücken
-        annoation2.coordinate = CLLocationCoordinate2DMake(36.313728, -121.044973)
+        annoation2.coordinate = CLLocationCoordinate2DMake(53.536172, 9.965777)//Hamburg Landungsbrücken
+       // annoation2.coordinate = CLLocationCoordinate2DMake(36.313728, -121.044973)
         annoation2.title = "Shop 2"
         self.locations.append(annoation2)
         
         let annoation3: MKPointAnnotation = MKPointAnnotation()
-        // annoation3.coordinate = CLLocationCoordinate2DMake(48.140215, 11.567039)//München am Karlsplatz
-        annoation3.coordinate = CLLocationCoordinate2DMake(38.313728, -123.044973)
+        annoation3.coordinate = CLLocationCoordinate2DMake(48.140215, 11.567039)//München am Karlsplatz
+        //annoation3.coordinate = CLLocationCoordinate2DMake(38.313728, -123.044973)
         annoation3.title = "Shop 3"
         self.locations.append(annoation3)
         
