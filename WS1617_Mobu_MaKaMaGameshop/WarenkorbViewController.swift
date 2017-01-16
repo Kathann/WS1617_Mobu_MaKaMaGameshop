@@ -26,9 +26,9 @@ class WarenkorbViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       // self.tableView.reloadData()
-   // self.gesamtPreisLabel.reloadInputViews()
-   // gesamtPreisLabel.text = getItemsValue().description
+    self.tableView.reloadData()
+    self.gesamtPreisLabel.reloadInputViews()
+    gesamtPreisLabel.text = getItemsValue().description
     }
     
     
