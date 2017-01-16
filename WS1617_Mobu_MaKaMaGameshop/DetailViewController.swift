@@ -6,7 +6,9 @@
 //  Copyright © 2017 fhkl. All rights reserved.
 //
 
+
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
@@ -17,10 +19,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var teaserImage: String?
     var contentImage: String?
     var contentGame: String?
+    var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
  
     @IBAction func warenkorbButton(_ sender: UIButton) {
-        let artikel1: Artikel = Artikel(gameImageName: contentImage! ,name: contentGameLabel.text! , edition: editionLabel.text! , version: "PC", price: priceLabel.text!, deleteIcon: contentImage! )
+        let artikel1: Artikel = Artikel(gameImageName: contentImage! ,name: contentGameLabel.text! , edition: editionLabel.text! , version: versionLabel.text!, price: priceLabel.text!, deleteIcon: contentImage! )
         
         WarenkorbEintraegeArray.WarenkorbArray.eintraege.append(artikel1)
         
@@ -30,10 +33,12 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         
     }
+
+    
     
     @IBAction func zurWunschliste(_ sender: Any) {
         
-        let Artikel: WunschlisteArtikel = WunschlisteArtikel(gameImageName: contentImage!, name: contentGameLabel.text!, info: "Derzeit gibt es keine Sonderaktion für dieses Spiel")
+        let Artikel: WunschlisteArtikel = WunschlisteArtikel(gameImageName: contentImage!, name: contentGameLabel.text!, info: "Derzeit keine Sonderaktion")
         
         
         WunschlisteArray.wunschlisteListe.wunschlisteEintraege.append(Artikel)
@@ -46,9 +51,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var editionPickerView: UIPickerView!
     @IBOutlet weak var editionLabel: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var versionPickerView: UIPickerView!
+    @IBOutlet weak var warenkorbButton: UIButton!
     
     
     var edition = ["Standard", "Premium", "Deluxe"]
+    var version = ["PC", "PS4", "XBOX ONE"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,8 +81,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.contentGameLabel.text = contentGame!
         }
         
+        
         editionPickerView.delegate = self
         editionPickerView.dataSource = self
+        
+        versionPickerView.delegate = self
+        versionPickerView.dataSource = self
+
         
         premiumText = priceText
         deluxeText = priceText
@@ -92,6 +106,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }*/
     
     
+    
     func priceLabelToFloatPremium(){// Originalpreis nehmen und 10 Euro Zuschlag für Premiumversion
         let premiumFloat = Float(priceText!)  //price Text von String in Float
         let sum = premiumFloat! + 10.0  // addieren
@@ -106,21 +121,35 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     //--------------PICKERVIEW------------------
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == editionPickerView{
         return edition.count
+        }
+        else{
+        return version.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == editionPickerView{
         return edition[row]
+        }
+        else{
+            return version[row]
+        }
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView == editionPickerView{
         self.editionLabel.text = edition[row]
+    
         
         if edition[row] == "Standard"{
             self.priceLabel.text = priceText!
@@ -132,7 +161,12 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         if edition[row] == "Deluxe"{
             priceLabelToFloatDeluxe()
             self.priceLabel.text = deluxeText!
+            }
         }
+        else{
+            self.versionLabel.text = version[row]
+        }
+
     }
     
    /* func textFieldDidBeginEditing(_ textField: UITextField) {

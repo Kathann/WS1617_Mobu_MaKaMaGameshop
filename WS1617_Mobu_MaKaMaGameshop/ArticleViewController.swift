@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ArticleViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var games: [Spiel] = []// Für jede Section eine Klammer, sonst out of index...
+    var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +49,58 @@ class ArticleViewController: UIViewController {
         games.append(game9)
     }
     
+    /*func createGameDataAction(){//mit coreData
+        let articleEntity: NSEntityDescription? = NSEntityDescription.entity(forEntityName:"ArticleEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
+        
+        if articleEntity != nil {
+            let article1 = NSManagedObject(entity: articleEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
+            article1.setValue("ARK: Survival Envolved", forKey: "name")
+            article1.setValue("ark", forKey: "gameImagename")
+            article1.setValue(29.99, forKey: "price")
+            article1.setValue("bannertentacle", forKey: "teaserImageName")
+            self.appDelegate.coreDataStack.saveContext()
+        }
+    }
+    
+    func fetchGameDataAction(){
+        let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArticleEntity")
+        do {
+            if let results = try self.appDelegate.coreDataStack.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject] {
+                for article in results {
+                    let gameImageName: String? = article.value(forKey: "gameImageName") as? String
+                    let name: String? = article.value(forKey: "name") as? String
+                    let categorie: String? = article.value(forKey: "category") as? String
+                    let price: Float? = article.value(forKey: "price") as? Float
+                    let teaserImageName: String? = article.value(forKey: "teaserImageName") as? String
+                    
+                    if gameImageName != nil && name != nil && categorie != nil && price != nil && teaserImageName != nil {
+                        let newGame: Spiel = Spiel(gameImageName: gameImageName!, name: name!, categorie: categorie!, price: price!, teaserImageName: teaserImageName!)
+                        self.games.append(newGame)
+                    }
+                }
+            }
+        }
+        catch {
+            fatalError("There was an error fetching the items")
+        }
+    }*/
+    
+    
+    
+    
+    
+    
+    
     func createGameDataPointandClick(){
         let game1: Spiel = Spiel(gameImageName: "dayofthetentacle", name: "Day of the Tentacle", categorie: "Point and Click", price: 12.99, teaserImageName: "minecraftheader")
         let game2: Spiel = Spiel(gameImageName: "decay", name: "Decay - The Mare", categorie: "Point and Click", price: 6.99, teaserImageName: "minecraftheader")
         let game3: Spiel = Spiel(gameImageName: "indianajones", name: "Indiana Jones and the fate of atlantis", categorie: "Point and Click", price: 4.99, teaserImageName: "minecraftheader")
         let game4: Spiel = Spiel(gameImageName: "loom", name: "Loom", categorie: "Point and Click", price: 5.99, teaserImageName: "minecraftheader")
-        let game5: Spiel = Spiel(gameImageName: "maniacmanson", name: "Maniac Manson", categorie: "Point and Click", price: 999.99, teaserImageName: "minecraftheader")
+        let game5: Spiel = Spiel(gameImageName: "maniacmanson", name: "Maniac Manson", categorie: "Point and Click", price: 9.99, teaserImageName: "minecraftheader")
         let game6: Spiel = Spiel(gameImageName: "randalsmonday", name: "Randals's Monday", categorie: "Point and Click", price: 7.99, teaserImageName: "minecraftheader")
         let game7: Spiel = Spiel(gameImageName: "samandmax", name: "Sam & Max: Hit the Road", categorie: "Point and Click", price: 29.99, teaserImageName: "minecraftheader")
         let game8: Spiel = Spiel(gameImageName: "secretofmonkeyisland", name: "Secret of Monkey Island", categorie: "Point and Click", price: 9.99, teaserImageName: "minecraftheader")
-        let game9: Spiel = Spiel(gameImageName: "zakmckracken", name: "Zak McKracken", categorie: "Point and Click", price: 249.99, teaserImageName: "minecraftheader")
+        let game9: Spiel = Spiel(gameImageName: "zakmckracken", name: "Zak McKracken", categorie: "Point and Click", price: 24.99, teaserImageName: "minecraftheader")
         games.append(game1)
         games.append(game2)
         games.append(game3)
@@ -68,7 +112,7 @@ class ArticleViewController: UIViewController {
         games.append(game9)
     }
     
-    func createGameDataRpg(){//TESTMETHODE
+    func createGameDataRpg(){
         let game1: Spiel = Spiel(gameImageName: "darksouls3", name: "Darksouls 3", categorie: "Rpg", price: 29.99, teaserImageName: "minecraftheader")
         let game2: Spiel = Spiel(gameImageName: "deusex", name: "Deus Ex: Mankind Divided", categorie: "Rpg", price: 24.99, teaserImageName: "minecraftheader")
         let game3: Spiel = Spiel(gameImageName: "dragonage", name: "Dragon Age: Inquisition", categorie: "Rpg", price: 9.99, teaserImageName: "minecraftheader")
