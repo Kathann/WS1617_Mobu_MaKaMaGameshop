@@ -143,6 +143,68 @@
             endingLineNumber = "3"
             landmarkName = "WunschlisteArray"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WS1617_Mobu_MaKaMaGameshop.WunschlisteArray.__deallocating_deinit"
+                  moduleName = "WS1617_Mobu_MaKaMaGameshop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Desktop/Mobu%20WS1617/WS1617_Mobu_MaKaMaGameshop/WS1617_Mobu_MaKaMaGameshop/WunschlisteArray.swift"
+                  timestampString = "506350285.128081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WS1617_Mobu_MaKaMaGameshop.WunschlisteArray.deinit"
+                  moduleName = "WS1617_Mobu_MaKaMaGameshop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Desktop/Mobu%20WS1617/WS1617_Mobu_MaKaMaGameshop/WS1617_Mobu_MaKaMaGameshop/WunschlisteArray.swift"
+                  timestampString = "506350285.132456"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WS1617_Mobu_MaKaMaGameshop.WunschlisteArray.init () -&gt; WS1617_Mobu_MaKaMaGameshop.WunschlisteArray"
+                  moduleName = "WS1617_Mobu_MaKaMaGameshop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Desktop/Mobu%20WS1617/WS1617_Mobu_MaKaMaGameshop/WS1617_Mobu_MaKaMaGameshop/WunschlisteArray.swift"
+                  timestampString = "506350285.136663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3"
+                  endingLineNumber = "3"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WS1617_Mobu_MaKaMaGameshop.WunschlisteArray.__allocating_init () -&gt; WS1617_Mobu_MaKaMaGameshop.WunschlisteArray"
+                  moduleName = "WS1617_Mobu_MaKaMaGameshop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Desktop/Mobu%20WS1617/WS1617_Mobu_MaKaMaGameshop/WS1617_Mobu_MaKaMaGameshop/WunschlisteArray.swift"
+                  timestampString = "506350285.140765"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

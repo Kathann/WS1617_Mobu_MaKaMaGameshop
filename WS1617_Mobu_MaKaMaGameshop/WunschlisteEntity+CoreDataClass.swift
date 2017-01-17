@@ -6,8 +6,8 @@
 //  Copyright © 2017 fhkl. All rights reserved.
 //
 
-import Foundation
-import CoreData
+//import Foundation
+//import CoreData
 
 //@objc(WunschlisteEntity)
 //public class WunschlisteEntity: NSManagedObject {

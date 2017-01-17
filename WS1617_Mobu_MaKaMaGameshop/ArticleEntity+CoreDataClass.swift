@@ -6,10 +6,10 @@
 //  Copyright © 2017 fhkl. All rights reserved.
 //
 
-import Foundation
-import CoreData
-
-@objc(ArticleEntity)
-public class ArticleEntity: NSManagedObject {
-
-}
+//import Foundation
+//import CoreData
+//
+//@objc(ArticleEntity)
+//public class ArticleEntity: NSManagedObject {
+//
+//}

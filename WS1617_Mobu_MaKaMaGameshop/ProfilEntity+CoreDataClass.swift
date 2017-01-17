@@ -5,9 +5,9 @@
 //  Created by Student on 17.01.17.
 //  Copyright © 2017 fhkl. All rights reserved.
 //
-
-import Foundation
-import CoreData
+//
+//import Foundation
+//import CoreData
 
 //@objc(ProfilEntity)
 //public class ProfilEntity: NSManagedObject {

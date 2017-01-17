@@ -5,28 +5,7 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="ProfilEntity" representedClassName="ProfilEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="datum" attributeType="String" syncable="YES"/>
-        <attribute name="gameImageName" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="WarenkorbEntity" representedClassName="WarenkorbEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="deleteIcon" attributeType="String" syncable="YES"/>
-        <attribute name="edition" attributeType="String" syncable="YES"/>
-        <attribute name="gameImageName" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="price" attributeType="String" syncable="YES"/>
-        <attribute name="version" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="WunschlisteEntity" representedClassName="WunschlisteEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="gameImageName" attributeType="String" syncable="YES"/>
-        <attribute name="info" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
         <element name="ArticleEntity" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="ProfilEntity" positionX="-36" positionY="63" width="128" height="90"/>
-        <element name="WarenkorbEntity" positionX="-63" positionY="9" width="128" height="135"/>
-        <element name="WunschlisteEntity" positionX="-54" positionY="54" width="128" height="90"/>
     </elements>
 </model>
