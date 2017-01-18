@@ -318,7 +318,7 @@
                             <constraint firstItem="BZ0-Fq-u9K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pkK-cS-Avd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Start" id="7pU-Q3-jDc"/>
+                    <tabBarItem key="tabBarItem" title="Start" image="home icon" id="7pU-Q3-jDc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1063,7 +1063,7 @@
                             <constraint firstItem="JOc-Fe-Orn" firstAttribute="centerX" secondItem="tAm-Kh-LfP" secondAttribute="centerX" id="vaw-Lv-nEy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profil" id="0og-l5-GT5"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="profil icon" id="0og-l5-GT5"/>
                     <connections>
                         <outlet property="tableView" destination="qpm-y8-MzI" id="dJ0-gB-ALZ"/>
                     </connections>
@@ -1178,7 +1178,7 @@
                             <constraint firstItem="GLP-37-B4P" firstAttribute="centerY" secondItem="F34-EU-PyL" secondAttribute="centerY" id="zD5-aO-4VI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wunschliste" id="DEI-sl-dix"/>
+                    <tabBarItem key="tabBarItem" title="Wunschliste" selectedImage="fav icon" id="DEI-sl-dix"/>
                     <connections>
                         <outlet property="tableView" destination="2bO-bO-P9k" id="rQB-UO-7NZ"/>
                     </connections>
@@ -1387,7 +1387,7 @@
                             <constraint firstItem="C40-8V-GHn" firstAttribute="leading" secondItem="6XG-0p-1ex" secondAttribute="leadingMargin" constant="30" id="xCA-lO-CgI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Warenkorb" id="Nr8-mh-skq"/>
+                    <tabBarItem key="tabBarItem" title="Warenkorb" image="warenkorb icon" id="Nr8-mh-skq"/>
                     <connections>
                         <outlet property="gesamtPreisLabel" destination="rrg-ir-pCb" id="rpj-77-hu7"/>
                         <outlet property="tableView" destination="ADe-ii-YUT" id="eM1-18-hby"/>
@@ -1576,7 +1576,7 @@
         <scene sceneID="0Wu-dD-sTk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QOt-z2-Qqz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kategorien" id="S9T-AO-3xW"/>
+                    <tabBarItem key="tabBarItem" title="Kategorien" image="kategorie icon" id="S9T-AO-3xW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAk-9y-FTK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1595,7 +1595,7 @@
         <scene sceneID="m1s-Ur-82l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k3S-QQ-j0X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Karte" id="iLq-5F-Uff"/>
+                    <tabBarItem key="tabBarItem" title="Karte" image="map icon" id="iLq-5F-Uff"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W7O-nR-kXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1619,13 +1619,19 @@
         <image name="99999" width="164" height="86"/>
         <image name="bannertentacle" width="424" height="179"/>
         <image name="bgapp" width="320" height="570"/>
+        <image name="fav icon" width="22" height="22"/>
         <image name="game1_1" width="416" height="142"/>
         <image name="game2" width="416" height="151"/>
         <image name="header" width="768" height="250"/>
+        <image name="home icon" width="22" height="22"/>
+        <image name="kategorie icon" width="22" height="22"/>
         <image name="kreis" width="166" height="166"/>
+        <image name="map icon" width="22" height="22"/>
+        <image name="profil icon" width="22" height="22"/>
         <image name="secure" width="30" height="26"/>
         <image name="stars" width="73" height="12"/>
         <image name="stern" width="47" height="45"/>
         <image name="verlauf" width="428" height="18"/>
+        <image name="warenkorb icon" width="22" height="22"/>
     </resources>
 </document>
