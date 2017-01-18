@@ -14,4 +14,6 @@ struct Spiel {
     var categorie: String
     var price: Float
     var teaserImageName: String
+    var detailImageName: String
+
 }
