@@ -50,18 +50,23 @@ class ArticleViewController: UIViewController {
     }
     
     /*func createGameDataAction(){//mit coreData
+        //Hier haben wollten wir versuchen die Kategorienmethoden persistent mit CoreData zu machen.
+        //Testweise erst mal mit einem Spiel. Allerdings funktioniert das nicht. Somit müssen wir auf CoreData verzichten.
+        
         let articleEntity: NSEntityDescription? = NSEntityDescription.entity(forEntityName:"ArticleEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
         
         if articleEntity != nil {
             let article1 = NSManagedObject(entity: articleEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             article1.setValue("ARK: Survival Envolved", forKey: "name")
-            article1.setValue("ark", forKey: "gameImagename")
+            article1.setValue("ark", forKey: "gameImageName")
             article1.setValue(29.99, forKey: "price")
-            article1.setValue("bannertentacle", forKey: "teaserImageName")
+            article1.setValue("Action", forKey: "category")
+            article1.setValue("ark_banner", forKey: "teaserImageName")
+            article1.setValue("ark_detail", forKey: "detailImageName")
             self.appDelegate.coreDataStack.saveContext()
         }
     }
-    ----------CORE DATA----------
+    //----------CORE DATA----------//
     func fetchGameDataAction(){
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArticleEntity")
         do {
@@ -71,10 +76,11 @@ class ArticleViewController: UIViewController {
                     let name: String? = article.value(forKey: "name") as? String
                     let categorie: String? = article.value(forKey: "category") as? String
                     let price: Float? = article.value(forKey: "price") as? Float
+                    let detailImageName: String? = article.value(forKey: "detailImageName") as? String
                     let teaserImageName: String? = article.value(forKey: "teaserImageName") as? String
                     
-                    if gameImageName != nil && name != nil && categorie != nil && price != nil && teaserImageName != nil {
-                        let newGame: Spiel = Spiel(gameImageName: gameImageName!, name: name!, categorie: categorie!, price: price!, teaserImageName: teaserImageName!)
+                    if gameImageName != nil && name != nil && price != nil && categorie != nil && detailImageName != nil && teaserImageName != nil{
+                        let newGame: Spiel = Spiel(gameImageName: gameImageName!, name: name!, categorie: categorie!, price: price!, teaserImageName: teaserImageName!, detailImageName: detailImageName!)
                         self.games.append(newGame)
                     }
                 }
@@ -83,13 +89,13 @@ class ArticleViewController: UIViewController {
         catch {
             fatalError("There was an error fetching the items")
         }
-    }*/
+    }
     
     
     
     
     
-    
+    */
     
     func createGameDataPointandClick(){
         let game1: Spiel = Spiel(gameImageName: "dayofthetentacle", name: "Day of the Tentacle", categorie: "Point and Click", price: 12.99, teaserImageName: "bannertentacle", detailImageName: "dayofthetentacle_detail")

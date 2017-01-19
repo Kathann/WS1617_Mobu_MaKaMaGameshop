@@ -18,13 +18,13 @@ class CoreDataStack{
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         let coordinator: NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let applicationDocumentsDirectory: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
-        let persistentStoreUrl: URL = applicationDocumentsDirectory.appendingPathComponent("ArticleObjectsModel.sqlite")
+        let persistentStoreUrl: URL = applicationDocumentsDirectory.appendingPathComponent("ArticleObjectModel.sqlite")
         
         do {
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: persistentStoreUrl, options: nil)
         }
         catch {
-            fatalError("Persistent sore error! \(error)")
+            fatalError("Persistent store error! \(error)")
         }
         
         return coordinator

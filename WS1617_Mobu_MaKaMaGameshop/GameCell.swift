@@ -8,8 +8,14 @@
 
 import UIKit
 
+
+protocol GameCellDelegate {
+    func buttonPressed(cell: UITableViewCell)
+}
+
 class GameCell: UITableViewCell {
 
+    var delegate: GameCellDelegate?             //neu
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
