@@ -36,6 +36,7 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "residentevil7", name: "Resident Evil VII", categorie: "Action", price: 34.99, teaserImageName: "residentevil_banner", detailImageName: "residentevil_detail")
         let game8: Spiel = Spiel(gameImageName: "thewalkingdead", name: "The Walking Dead: A new frontier", categorie: "Action", price: 19.99, teaserImageName: "thewalkingdead_banner", detailImageName: "thewalkingdead_detail")
         let game9: Spiel = Spiel(gameImageName: "thewitcher3", name: "The Witcher 3: Wild Hunt", categorie: "Action", price: 14.99, teaserImageName: "thewitcher_banner", detailImageName: "thewitcher_detail")
+        let game10: Spiel = Spiel(gameImageName: "starbound_small", name: "Starbound", categorie: "Action", price: 24.99, teaserImageName: "starboundbanner", detailImageName: "starbound")
                 // Section: 0 = Action, 1= P&C, 2 = Rpg, 3 = Simulation, 4 = Sports, 5 = Strategie
         
         games.append(game1)
@@ -47,6 +48,7 @@ class ArticleViewController: UIViewController {
         games.append(game7)
         games.append(game8)
         games.append(game9)
+        games.append(game10)
     }
     
     /*func createGameDataAction(){//mit coreData
@@ -107,6 +109,7 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "samandmax", name: "Sam & Max: Hit the Road", categorie: "Point and Click", price: 29.99, teaserImageName: "samandmax_banner", detailImageName: "samandmax_detail")
         let game8: Spiel = Spiel(gameImageName: "secretofmonkeyisland", name: "Secret of Monkey Island", categorie: "Point and Click", price: 9.99, teaserImageName: "monkeyisland_banner", detailImageName: "monkeyisland_detail")
         let game9: Spiel = Spiel(gameImageName: "zakmckracken", name: "Zak McKracken", categorie: "Point and Click", price: 24.99, teaserImageName: "zmc_banner", detailImageName: "zmc_detail")
+        let game10: Spiel = Spiel(gameImageName: "deponia_small", name: "Deponia", categorie: "Point and Click", price: 9.99, teaserImageName: "deponiabanner", detailImageName: "deponia")
         games.append(game1)
         games.append(game2)
         games.append(game3)
@@ -116,6 +119,7 @@ class ArticleViewController: UIViewController {
         games.append(game7)
         games.append(game8)
         games.append(game9)
+        games.append(game10)
     }
     
     func createGameDataRpg(){
@@ -128,6 +132,7 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "skyrim", name: "The Elderscrolls: Skyrim", categorie: "Rpg", price: 9.99, teaserImageName: "skyrim_banner", detailImageName: "skyrim_detail")
         let game8: Spiel = Spiel(gameImageName: "thewitcher3", name: "The Witcher 3: Wild Hunt", categorie: "Rpg", price: 14.99, teaserImageName: "thewitcher_banner", detailImageName: "thewitcher_detail")
         let game9: Spiel = Spiel(gameImageName: "worldofwarcraft", name: "World of Warcraft", categorie: "Rpg", price: 9.99, teaserImageName: "worldofwarcraft_banner", detailImageName: "worldofwarcraft_detail")
+        let game10: Spiel = Spiel(gameImageName: "warframe_small", name: "Warframe", categorie: "Rpg", price: 19.99, teaserImageName: "warframebanner", detailImageName: "warframe")
         games.append(game1)
         games.append(game2)
         games.append(game3)
@@ -137,6 +142,7 @@ class ArticleViewController: UIViewController {
         games.append(game7)
         games.append(game8)
         games.append(game9)
+        games.append(game10)
     }
     
     func createGameDataSports(){
@@ -149,6 +155,7 @@ class ArticleViewController: UIViewController {
         let game7: Spiel = Spiel(gameImageName: "pga", name: "Rory McIlroy PGA Tour", categorie: "Sports", price: 34.99, teaserImageName: "pga_banner", detailImageName: "pga_detail")
         let game8: Spiel = Spiel(gameImageName: "steep", name: "Steep", categorie: "Sports", price: 29.99, teaserImageName: "steep_banner", detailImageName: "steep_detail")
         let game9: Spiel = Spiel(gameImageName: "wwe2k17", name: "WWE 2k17", categorie: "Sports", price: 29.99, teaserImageName: "wwe2k17_banner", detailImageName: "wwe2k17_detail")
+         let game10: Spiel = Spiel(gameImageName: "rocket_small", name: "Rocket League", categorie: "Sports", price: 29.99, teaserImageName: "rocketbanner", detailImageName: "rocket")
         
         games.append(game1)
         games.append(game2)
@@ -159,6 +166,7 @@ class ArticleViewController: UIViewController {
         games.append(game7)
         games.append(game8)
         games.append(game9)
+        games.append(game10)
         
         
     }
